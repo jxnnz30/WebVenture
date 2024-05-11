@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebVenture</title>
+    <!--Estilos CSS-->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!--Tailwind-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <!--Font Awesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-primary py-4">
+        <!-- Navbar -->
+        <nav>
+            <div class="container mx-auto flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="./images/Designer (1).png" alt="Logo" class="h-8 mr-4">
+                    <span class="text-secondary text-lg font-semibold">WebVenture</span>
+                </div>
+                <!-- Menu -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="#" class="text-secondary hover:text-accent">Servicios</a>
+                    <a href="#" class="text-secondary hover:text-accent">Acerca de</a>
+                    <a href="#" class="text-secondary hover:text-accent">Contacto</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-secondary focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-primary hidden">
+        <div class="px-2 py-3 space-y-2">
+            <a href="#" class="block text-secondary hover:text-accent">Servicios</a>
+            <a href="#" class="block text-secondary hover:text-accent">Acerca de</a>
+            <a href="#" class="block text-secondary hover:text-accent">Contacto</a>
+        </div>
+    </div>
+    </header>
+    
+
+    <main>
+        <!-- Section de Descripción -->
+        <section class="descripcion mt-8 bg-white">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap items-center">
+                    <!-- Texto y descripción de la empresa (solo visible en pantallas grandes) -->
+                    <div class="hidden md:w-1/2 px-4 md:block">
+                        <h2 class="text-3xl font-bold mb-4 text-primary">WebVenture</h2>
+                        <p class="text-lg text-gray-700">Somos una empresa dedicada a ofrecer soluciones tecnológicas para pequeños negocios y emprendedores. Nuestros servicios incluyen desarrollo de aplicaciones web, optimización de plataformas existentes y asesoramiento en estrategias digitales. Estamos comprometidos en ayudarte a llevar tu negocio al siguiente nivel en el mundo digital.</p>
+                    </div>
+                    <!-- Imagen llamativa -->
+                    <div class="w-full md:w-1/2 px-4 order-1 md:order-2 relative">
+                        <!-- Imagen sin sombra -->
+                        <img src="./images/descripcion.jpg" alt="Imagen llamativa" class="w-full rounded-lg md:static md:opacity-100 md:ml-8">
+                        <!-- Texto sobre la imagen solo en pantallas pequeñas -->
+                        <div class="absolute inset-0 flex flex-col justify-center items-center bg-shadow bg-opacity-50 md:hidden z-10">
+                            <h2 class="text-white text-2xl font-bold text-center">WebVenture</h2>
+                            <p class="text-white text-lg text-center">Somos una empresa dedicada a ofrecer soluciones tecnológicas para pequeños negocios y emprendedores. Nuestros servicios incluyen desarrollo de aplicaciones web, optimización de plataformas existentes y asesoramiento en estrategias digitales. Estamos comprometidos en ayudarte a llevar tu negocio al siguiente nivel en el mundo digital.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Section de Servicios -->
+        <section class="servicios mt-8 bg-gray-200 py-12">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-primary">Nuestros Servicios</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Servicio 1 -->
+                    <div class="p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4">Desarrollo de Aplicaciones Web</h3>
+                        <p class="text-gray-700">Creamos aplicaciones web personalizadas para satisfacer las necesidades específicas de tu negocio. Desde sistemas de gestión hasta plataformas de comercio electrónico, podemos ayudarte a llevar tu idea desde el concepto hasta la realidad.</p>
+                    </div>
+                    <!-- Servicio 2 -->
+                    <div class="p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4">Optimización de Plataformas</h3>
+                        <p class="text-gray-700">Mejoramos el rendimiento y la usabilidad de tus plataformas existentes. Realizamos análisis exhaustivos y aplicamos las mejores prácticas para optimizar tu sitio web y garantizar una experiencia del usuario óptima.</p>
+                    </div>
+                    <!-- Servicio 3 -->
+                    <div class="p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4">Asesoramiento en Estrategias Digitales</h3>
+                        <p class="text-gray-700">Proporcionamos orientación experta para ayudarte a desarrollar estrategias digitales efectivas. Desde la identificación de oportunidades hasta la implementación de tácticas, estamos aquí para ayudarte a alcanzar tus objetivos comerciales en línea.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section del Equipo -->
+        <section class="team mt-8 bg-white py-12">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <!-- Imagen -->
+                    <div class="md:w-1/2 mt-6 md:mt-0">
+                        <img src="./images/_2d2cee6c-529f-4047-9ce6-b8e846064663.jpg" alt="Equipo" class="w-full rounded-lg">
+                    </div>
+                    <!-- Texto -->
+                    <div class="md:w-1/2 mt-6 md:mt-0 md:pl-8">
+                        <h2 class="text-3xl font-bold text-green-500 mb-4">&lt;Jonny!&gt;</h2>
+                        <p class="text-gray-700 mb-4">Fundador de la empresa</p>
+                        <p class="text-gray-700">WebVenture surgió de la pasión por la tecnología y la innovación. Nuestro fundador, Jonny, tuvo la visión de crear una empresa que ofreciera soluciones digitales de vanguardia para ayudar a pequeños negocios y emprendedores a alcanzar sus objetivos en línea. Desde entonces, nos hemos dedicado a brindar servicios de alta calidad y a mantenernos a la vanguardia de las últimas tendencias tecnológicas.</p>
+                        <div class="md:w-1/2 mt-6 md:mt-0">
+                            <a href="#" class="inline-block bg-primary text-white px-6 py-3 rounded-full mt-4 hover:bg-accent">Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section de Contacto -->
+        <section class="contacto mt-8 bg-gray-200 py-12">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-primary">Contacto</h2>
+                <form action="#" method="POST" class="w-full max-w-lg mx-auto">
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <input class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="name" type="text" placeholder="Nombre">
+                            
+                        </div>
+                        <div class="w-full md:w-1/2 px-3">
+                            <input class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="service" type="text" placeholder="Servicio Solicitado">
+                            
+                        </div>
+                    </div>
+                    <div class="w-full px-3">
+                        <textarea class="appearance-none block w-full text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="message" placeholder="Descripción Detallada"></textarea>
+                        
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <button class="bg-primary hover:bg-accent text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                            Enviar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto flex justify-center items-center">
+            <a href="#" class="text-white mr-4 hover:text-gray-400"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white mr-4 hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
